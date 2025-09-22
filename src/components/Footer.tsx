@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import elevLogo from "@/assets/elev-logo.png";
-import { Mail, Phone, MapPin } from "lucide-react";
+import elevLogo from "@/assets/elev-logo-new.png";
+import { Mail, MapPin, Instagram } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -20,7 +20,11 @@ export const Footer = () => {
               We help you dominate local search and attract premium customers.
             </p>
             
-            <Button variant="cta" size="lg">
+            <Button 
+              variant="cta" 
+              size="lg"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Start Your Free Consultation
             </Button>
           </div>
@@ -43,11 +47,18 @@ export const Footer = () => {
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>info@elevmkt.com</span>
+                <span>contato@elevmkt.com</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <Instagram className="h-4 w-4" />
+                <a 
+                  href="https://www.instagram.com/elevmkt.ai/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  @elevmkt.ai
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />

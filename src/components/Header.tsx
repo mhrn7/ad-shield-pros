@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import elevLogo from "@/assets/elev-logo.png";
+import elevLogo from "@/assets/elev-logo-new.png";
 
 export const Header = () => {
   return (
@@ -24,7 +24,11 @@ export const Header = () => {
           </a>
         </nav>
         
-        <Button variant="cta" size="lg">
+        <Button 
+          variant="cta" 
+          size="lg"
+          onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+        >
           Get Free Consultation
         </Button>
       </div>

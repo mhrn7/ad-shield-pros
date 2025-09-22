@@ -103,7 +103,12 @@ export const Services = () => {
             more visibility and customers through Google Ads.
           </p>
           
-          <Button variant="cta" size="xl" className="group">
+          <Button 
+            variant="cta" 
+            size="xl" 
+            className="group"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Schedule Free Consultation Now
             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>

@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { 
   User, 
   Mail, 
@@ -48,9 +49,20 @@ export const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // TODO: Replace with actual Supabase integration when connected
-      // For now, just simulate the submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          business: formData.business,
+          location: formData.location,
+          message: formData.message
+        });
+
+      if (error) {
+        throw error;
+      }
       
       toast({
         title: "Success!",
@@ -69,9 +81,10 @@ export const ContactForm = () => {
       });
       
     } catch (error) {
+      console.error('Error submitting form:', error);
       toast({
         title: "Error",
-        description: "Something went wrong. Please try again or call us directly.",
+        description: "Something went wrong. Please try again or contact us directly.",
         variant: "destructive",
         duration: 5000,
       });
