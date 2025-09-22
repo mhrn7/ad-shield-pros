@@ -127,8 +127,7 @@ export const ContactForm = () => {
                     "Custom Google Ads strategy for your location",
                     "Competitor analysis report",
                     "Keyword opportunities assessment", 
-                    "Anti-blocking system explanation",
-                    "ROI projections for your business"
+                    "Anti-blocking system explanation"
                   ].map((benefit, index) => (
                     <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
                       <CheckCircle className="h-4 w-4 text-success mt-0.5 flex-shrink-0" />

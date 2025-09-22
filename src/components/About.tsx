@@ -11,13 +11,13 @@ import {
 const stats = [
   {
     icon: Users,
-    number: "200+",
+    number: "40+",
     label: "Repair Shops Served"
   },
   {
     icon: TrendingUp,
-    number: "3x",
-    label: "Average Revenue Increase"
+    number: "3-7x",
+    label: "Average ROI Increase"
   },
   {
     icon: Shield,
@@ -26,7 +26,7 @@ const stats = [
   },
   {
     icon: Award,
-    number: "5+",
+    number: "3+",
     label: "Years Experience"
   }
 ];
@@ -66,7 +66,12 @@ export const About = () => {
             </div>
             
             <div className="mt-8">
-              <Button variant="cta" size="xl" className="group">
+              <Button 
+                variant="cta" 
+                size="xl" 
+                className="group"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 See How We're Different
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -106,10 +111,15 @@ export const About = () => {
             the premium repair jobs that actually pay well.
           </p>
           
-          <Button variant="hero" size="xl" className="group">
-            Claim Your Free Strategy Session
-            <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+            <Button 
+              variant="hero" 
+              size="xl" 
+              className="group"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Claim Your Free Strategy Session
+              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
         </div>
       </div>
     </section>

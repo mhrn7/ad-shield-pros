@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import elevLogo from "@/assets/elev-logo-new.png";
+import { Instagram } from "lucide-react";
 
 export const Header = () => {
   return (
@@ -21,6 +22,14 @@ export const Header = () => {
           </a>
           <a href="#contact" className="text-foreground hover:text-primary transition-colors">
             Contact
+          </a>
+          <a 
+            href="https://www.instagram.com/elevmkt.ai/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-foreground hover:text-primary transition-colors"
+          >
+            <Instagram className="h-5 w-5" />
           </a>
         </nav>
         
